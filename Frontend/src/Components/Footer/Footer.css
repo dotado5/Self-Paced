@@ -1,0 +1,23 @@
+.footer {
+  @apply bg-[#0D5986] w-full flex flex-col gap-[3em] xl:text-base text-sm text-white px-[10%] pt-[3em];
+
+  .footer_items {
+    @apply grid xl:grid-cols-4 grid-cols-2;
+  }
+
+  .item {
+    @apply flex flex-col gap-2 items-start;
+  }
+
+  h3 {
+    @apply text-[18px] font-semibold;
+  }
+
+  p {
+    @apply font-normal;
+  }
+}
+
+.TandC {
+  @apply border-t-2 border-t-[#DADADACC] opacity-80 flex flex-col items-center justify-between py-[1em] xl:flex-row;
+}

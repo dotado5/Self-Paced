@@ -1,0 +1,9 @@
+.navbar {
+  @apply p-4;
+
+  .navbarIcon {
+    @apply rounded-full w-[44px] h-[44px] text-[20px] text-white uppercase pt-[5%] font-semibold;
+    background: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%);
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,426 @@
+swagger: '2.0'
+info:
+  description: API documentation for the application
+  version: '1.0.0'
+  title: Self-Paced Api
+host: us-central1-doyenifyselfpaced.cloudfunctions.net/api
+basePath: /home
+schemes:
+  - http
+securityDefinitions:
+  bearerAuth:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: User access token as Bearer token
+paths:
+  /home:
+    get:
+      summary: Contact
+      description: Make contact with backend.
+      responses:
+        200:
+          description: Successful response with a message.
+  /createCourse:
+    post:
+      summary: Create Course endpoint
+      description: Add new course
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: object
+                properties:
+                  colored:
+                    type: string
+                    example: "Colored Title"
+                  plain:
+                    type: string
+                    example: "Plain Title"
+              about:
+                type: string
+                example: "About the content"
+              description:
+                type: string
+                example: "Detailed description"
+              modules:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    moduleName:
+                      type: string
+                      example: "Module Name"
+                    moduleContent:
+                      type: string
+                      example: "Module Content"
+              category:
+                type: string
+                enum: [ 'engineering', 'design', 'business & marketing', 'data science', 'IT security' ]
+                example: 'engineering'
+              imgUrlNo:
+                type: number
+                example: 1
+      responses:
+        200:
+          description: Successfully created
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "123456"
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /getAllCourses:
+    get:
+      summary: All Courses
+      description: Fetch all courses in the database.
+      responses:
+        200:
+          description: Successful response with a list of courses.
+  /getCourseById:
+    post:
+      summary: Get Course by Id endpoint
+      description: Fetch course by courseId
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              courseId:
+                type: string
+                example: "1235ddfc"
+      responses:
+        200:
+          description: Fetch Successful
+          schema:
+            type: object
+            properties:
+              course:
+                type: object
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /updateCourse:
+    post:
+      summary: Update Course endpoint
+      description: Update course
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              courseId:
+                type: string
+                example: "8Tss2V1fq2UeTbmT1PFc"
+              title:
+                type: object
+                properties:
+                  colored:
+                    type: string
+                    example: "Colored Title"
+                  plain:
+                    type: string
+                    example: "Plain Title"
+              about:
+                type: string
+                example: "About the content"
+              description:
+                type: string
+                example: "Detailed description"
+              modules:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    moduleName:
+                      type: string
+                      example: "Module Name"
+                    moduleContent:
+                      type: string
+                      example: "Module Content"
+              category:
+                type: string
+                enum: [ 'engineering', 'design', 'business & marketing', 'data science', 'IT security' ]
+                example: 'engineering'
+              imgUrlNo:
+                type: number
+                example: 1
+      responses:
+        200:
+          description: Course Successfully updated
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "123456"
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /register:
+    post:
+      summary: Register user endpoint
+      description: Create user account
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                example: "test@test.com"
+              firstName:
+                type: string
+                example: "John"
+              lastName:
+                type: string
+                example: "Doe"
+              password:
+                type: string
+                example: "********"
+      responses:
+        200:
+          description: User account successfully created
+          schema:
+            type: object
+            properties:
+              userid:
+                type: string
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /login:
+    post:
+      summary: User login endpoint
+      description: Log user in by user credentials
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                example: "test@test.com"
+              password:
+                type: string
+                example: "********"
+      responses:
+        200:
+          description: User Successfully logged in
+          schema:
+            type: object
+            properties:
+              user:
+                type: object
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /getAllUsers:
+    get:
+      summary: All Users
+      description: Fetch all users in the database.
+      responses:
+        200:
+          description: Successful response with a list of users.
+  /getUserById:
+    post:
+      summary: Get User endpoint
+      description: Get user details
+      security:
+        - bearerAuth: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+                example: "7N8QMl2zM1AJ9F62ez7V"
+      responses:
+        200:
+          description: User Successfully loaded
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "123456"
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /updateUserById:
+    post:
+      summary: Update User endpoint
+      description: Update user details
+      security:
+        - bearerAuth: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+                example: "8Tss2V1fq2UeTbmT1PFc"
+              email:
+                type: string
+                example: "test@test.com"
+              enrolledCourses:
+                type: array
+                items:
+                  type: string
+                example: []
+              firstName:
+                type: string
+                example: "John"
+              lastName:
+                type: string
+                example: "saint"
+              middleName:
+                type: string
+                example: "Joseph"
+              password:
+                type: string
+                example: "********"
+      responses:
+        200:
+          description: User Successfully updated
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "123456"
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /deleteUserById:
+    post:
+      summary: Delete User account endpoint
+      description: Delete user account by userId
+      security:
+        - bearerAuth: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: User access token as Bearer token
+          example: Bearer <token>
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+                example: "7N8QMl2zM1AJ9F62ez7V"
+      responses:
+        200:
+          description: User Successfully deleted
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
+  /enroll:
+    post:
+      summary: Enroll user endpoint
+      description: Enroll user into a course.
+      security:
+        - bearerAuth: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: User access token as Bearer token
+          example: Bearer <token>
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            properties:
+              courseId:
+                type: string
+                example: "8Tss2V1fq2UeTbmT1PFc"
+      responses:
+        200:
+          description: User enrolled Successfully
+          schema:
+            type: object
+            properties:
+              user:
+                type: object
+        400:
+          description: Bad request
+        500:
+          description: Internal server error

@@ -1,0 +1,23 @@
+.learning_in_progress {
+  @apply flex flex-col items-start w-full sm:ml-[-10px];
+
+  h1 {
+    @apply text-[#2B2B2B] text-[36px] font-extrabold sm:text-[24px] md:text-[26px];
+  }
+
+  .resume {
+    @apply text-[#636363] text-[14px] font-bold mb-[16px];
+  }
+
+  .current_course {
+    @apply w-full flex flex-col items-start mt-[2em];
+  }
+
+  .other_courses {
+    @apply w-full flex flex-col items-start gap-5 mt-[64px] mb-[2em];
+
+    div {
+      @apply w-full;
+    }
+  }
+}

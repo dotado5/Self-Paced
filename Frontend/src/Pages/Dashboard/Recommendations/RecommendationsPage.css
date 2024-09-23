@@ -1,0 +1,19 @@
+.edit_recommendation {
+  @apply flex flex-col items-start w-full;
+
+  h1 {
+    @apply text-[#2B2B2B] text-[36px] font-extrabold sm:text-[26px] md:text-[30px];
+  }
+
+  .select {
+    @apply flex flex-col w-full items-start gap-4 mt-[2em];
+  }
+
+  .resume {
+    @apply text-[#636363] text-[14px] font-bold mb-[16px];
+  }
+
+  .categories {
+    @apply grid grid-cols-3 gap-5 sm:grid-cols-1 md:grid-cols-2 sm:mb-[1em];
+  }
+}

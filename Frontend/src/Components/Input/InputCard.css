@@ -1,0 +1,7 @@
+.inputCard {
+  @apply flex flex-col items-start gap-2 sm:w-full sm:mx-auto;
+
+  input {
+    @apply w-[421px] h-[60px] rounded-xl p-3 border-2 border-[#8E8E8E] bg-white sm:w-full sm:h-[50px];
+  }
+}

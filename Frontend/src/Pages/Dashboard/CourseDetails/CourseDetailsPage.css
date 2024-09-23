@@ -1,0 +1,36 @@
+.course_details_pages {
+  @apply sm:ml-[-10px];
+
+  h1 {
+    @apply flex items-center gap-3 text-[#2B2B2B] text-[36px] font-extrabold mb-[1em] mt-[0.3em] sm:text-[22px] md:text-[26px];
+  }
+
+  .course_details {
+    @apply flex gap-[3em] items-center sm:flex-col;
+
+    .course_video {
+      @apply flex flex-col items-center gap-[3em];
+    }
+
+    .course_info {
+      @apply flex flex-col gap-[3em] mt-[-6em] sm:flex-row sm:mt-[-2em] sm:gap-5;
+
+      p {
+        @apply sm:text-sm;
+      }
+
+      h2 {
+        @apply text-[24px] font-extrabold sm:mt-2;
+
+        background: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+
+  .about_course {
+    @apply text-left mt-[3em] sm:text-center;
+  }
+}

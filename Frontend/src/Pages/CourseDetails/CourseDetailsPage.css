@@ -1,0 +1,50 @@
+.courseDetails {
+  @apply flex flex-col w-full mt-[1em] px-28 sm:px-2;
+
+  .first_section {
+    @apply flex w-full xl:justify-between sm:flex-col-reverse sm:w-full sm:items-center md:flex-col-reverse md:w-full md:items-center;
+
+    div {
+      @apply w-[535px] flex flex-col items-start text-start gap-5 sm:w-full sm:items-center md:w-full md:items-center;
+
+      h1 {
+        @apply text-[64px] font-bold sm:text-[32px] md:text-[48px];
+        line-height: 76px;
+
+        p {
+          @apply p-0 sm:mb-[-20px];
+          background: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    }
+
+    img {
+      @apply sm:w-[200px] sm:mt-2 md:w-[400px];
+    }
+  }
+
+  .about_section {
+    h1 {
+      @apply text-[32px] font-semibold mt-[2em];
+    }
+  }
+
+  .syllabus_section {
+    @apply bg-white w-[798px] mx-auto rounded-2xl mt-[80px] mb-[80px] sm:w-full md:w-full;
+
+    h2 {
+      @apply text-[#2B2B2B] text-[32px] font-semibold mt-[1em] mb-[0.5em];
+    }
+
+    .module {
+      @apply flex flex-col items-start pl-[2em] border-t border-t-[#DCDCDC] py-[1em];
+
+      h4 {
+        @apply font-semibold text-[20px] text-[#2B2B2B];
+      }
+    }
+  }
+}

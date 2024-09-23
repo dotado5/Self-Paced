@@ -1,0 +1,56 @@
+.home {
+  .first_section {
+    span,
+    .pace {
+      background: linear-gradient(96.53deg, #1082c5 44.86%, #3cbc49 99.05%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+    }
+
+    .number {
+      background: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .second_section {
+    @apply py-16 flex flex-col items-center gap-[3em];
+
+    h2 {
+      @apply text-4xl font-bold mb-8 text-center flex gap-2 items-center;
+    }
+
+    .course {
+      background: linear-gradient(98.55deg, #1082c5 70.91%, #3cbc49 98.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+    }
+  }
+
+  .testimonies_section {
+    @apply flex flex-col items-center gap-[2em] mb-[4em] mx-auto w-[85%];
+
+    h2 {
+      @apply flex gap-1 font-bold text-[32px];
+
+      p {
+        background: linear-gradient(98.55deg, #1082c5 70.91%, #3cbc49 98.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        /* text-fill-color: transparent; */
+        text-align: center;
+      }
+    }
+  }
+
+  .testimonies {
+    @apply flex flex-col gap-4;
+  }
+}

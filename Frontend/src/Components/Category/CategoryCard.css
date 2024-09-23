@@ -1,0 +1,4 @@
+.category_card {
+  @apply bg-white rounded-xl flex flex-col items-center gap-2 py-[15%];
+}
+/* w-[400px] h-[310px] */

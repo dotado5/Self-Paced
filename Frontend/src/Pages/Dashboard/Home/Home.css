@@ -1,0 +1,40 @@
+.dashboardHome {
+  @apply sm:ml-[-0.5em];
+
+  .top_div {
+    @apply flex flex-col items-start w-full mt-[35px] mb-[64px];
+
+    p {
+      @apply text-[#636363] text-[14px] font-bold mb-[16px];
+    }
+
+    .to_progress {
+      @apply text-[#0D5986] font-medium flex items-center gap-2 mt-[26.5px];
+    }
+  }
+
+  .bottom_div {
+    @apply flex flex-col items-start;
+
+    h5 {
+      @apply text-[#636363] text-[14px] font-bold mb-[16px];
+    }
+
+    p,
+    span {
+      @apply flex items-center gap-2;
+    }
+
+    .category {
+      @apply text-[#636363] text-[14px] font-medium;
+    }
+
+    span {
+      @apply text-[#0D5986] font-medium text-[14px];
+    }
+
+    .recommendations {
+      @apply grid grid-cols-3 gap-4 mb-[2em] sm:grid-cols-1 md:grid-cols-2;
+    }
+  }
+}

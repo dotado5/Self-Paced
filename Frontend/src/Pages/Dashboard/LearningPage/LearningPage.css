@@ -1,0 +1,17 @@
+.learning_page {
+  h1 {
+    @apply text-[#2B2B2B] text-[36px] font-extrabold flex items-center gap-2 ml-[1em];
+
+    span {
+      @apply font-black p-1 px-2 text-[16px];
+
+      border: 3px solid;
+      border-image: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%) 1;
+      border-radius: 50%;
+    }
+  }
+
+  div {
+    @apply flex flex-col items-center mt-[2em] gap-[2em];
+  }
+}

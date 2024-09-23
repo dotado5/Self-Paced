@@ -1,0 +1,8 @@
+.hero {
+  .pace {
+    background: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

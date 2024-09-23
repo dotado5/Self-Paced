@@ -1,0 +1,58 @@
+.authPage {
+  @apply flex flex-col items-center  mx-auto mb-[3em] mt-[2em] sm:px-4;
+
+  h1 {
+    @apply text-[48px] font-bold text-[#2B2B2B] flex items-center gap-2 mb-[0.6em] mt-[0.5em] sm:text-[30px];
+
+    p {
+      background: linear-gradient(90.21deg, #1082c5 0.29%, #3cbc49 117.67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .or {
+    position: relative;
+    z-index: 999;
+    margin-top: -10px;
+  }
+
+  .or::before {
+    position: absolute;
+    content: "";
+    top: 58%;
+    right: 58%;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background: #dcdcdc;
+  }
+
+  .or::after {
+    position: absolute;
+    content: "";
+    top: 58%;
+    right: 0;
+    left: 58%;
+    bottom: 0;
+    height: 1px;
+    background: #dcdcdc;
+  }
+
+  .authForm {
+    @apply bg-white rounded-2xl py-[2em] w-[501px] flex flex-col gap-5 sm:w-full;
+
+    h3 {
+      @apply text-[#2B2B2B] font-semibold text-[24px] border-b-2 border-b-[#DCDCDC] sm:w-[300px] md:w-[420px] md:mx-auto sm:mx-auto pb-6;
+    }
+
+    .authButton {
+      @apply border border-[#0D5986] text-[#0D5986] flex items-center gap-5 w-full lg:w-[420px] xl:w-[420px] h-[60px] rounded-lg mx-auto justify-center sm:w-[340px] md:w-[420px] sm:h-[50px];
+    }
+  }
+
+  form {
+    @apply flex flex-col items-start gap-2 w-[420px] mx-auto sm:w-[340px];
+  }
+}

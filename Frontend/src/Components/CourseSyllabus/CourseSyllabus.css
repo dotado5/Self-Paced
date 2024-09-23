@@ -1,0 +1,15 @@
+.syllabus_section {
+  @apply bg-white w-[798px] mx-auto rounded-2xl mt-[80px] mb-[80px] sm:w-full md:w-full;
+
+  h2 {
+    @apply text-[#2B2B2B] text-[32px] font-semibold mt-[1em] mb-[0.5em] sm:text-[22px];
+  }
+
+  .module {
+    @apply flex justify-between items-center pl-[2em] sm:pl-3 border-t border-t-[#DCDCDC] py-[1em] pr-5;
+
+    h4 {
+      @apply font-semibold text-[20px] text-[#2B2B2B] sm:text-base;
+    }
+  }
+}
