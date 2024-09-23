@@ -1,8 +1,8 @@
 .testimony_card {
-  @apply flex xl:flex-row xl:text-start flex-col-reverse text-center bg-white  p-[2em] gap-[2em] items-center rounded-2xl shadow-lg;
+  @apply flex xl:flex-row xl:text-start lg:flex-row lg:text-start flex-col-reverse text-center bg-white  p-[2em] gap-[2em] items-center rounded-2xl shadow-lg;
 
   div {
-    @apply flex flex-col xl:items-start items-center gap-1;
+    @apply flex flex-col xl:items-start lg:items-start items-center gap-1;
   }
 
   h3 {

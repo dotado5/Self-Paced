@@ -2,7 +2,7 @@
   @apply flex flex-col w-full mt-[1em] px-28 sm:px-2;
 
   .first_section {
-    @apply flex w-full xl:justify-between sm:flex-col-reverse sm:w-full sm:items-center md:flex-col-reverse md:w-full md:items-center;
+    @apply flex w-full xl:justify-between lg:justify-between sm:flex-col-reverse sm:w-full sm:items-center md:flex-col-reverse md:w-full md:items-center;
 
     div {
       @apply w-[535px] flex flex-col items-start text-start gap-5 sm:w-full sm:items-center md:w-full md:items-center;

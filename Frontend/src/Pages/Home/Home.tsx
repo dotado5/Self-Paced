@@ -37,9 +37,12 @@ const Home = () => {
             </p>
             <p className="pace">own pace</p>
           </h1>
-          <div className="flex flex-col md:flex-row xl:flex-row -mx-4">
+          <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row -mx-4">
             {cards.map((card, index) => (
-              <div key={index} className="md:w-1/3 xl:w-1/3 px-4 mb-8 md:mb-0">
+              <div
+                key={index}
+                className="md:w-1/3 xl:w-1/3 lg:w-1/3 px-4 mb-8 md:mb-0"
+              >
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg p-6 text-center">
                   <div className="text-4xl font-bold mb-4 number">
                     {card.number}
@@ -57,7 +60,7 @@ const Home = () => {
           <h2>
             Choose a <p className="course">course</p>
           </h2>
-          <div className="flex gap-5 flex-col xl:flex-row mx-4">
+          <div className="flex gap-5 flex-col xl:flex-row lg:flex-row mx-4">
             {Courses.filter((course) => course.featured).map(
               (course, index) => (
                 <CourseCard

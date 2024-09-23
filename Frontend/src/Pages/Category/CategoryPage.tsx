@@ -84,7 +84,7 @@ const CategoryPage = () => {
       <div
         className={`${
           Courses.filter((course) => course.category === category).length > 2
-            ? "course_list grid-cols-3 sm:grid-cols-1 sm:w-full sm:px-3 md:grid-cols-2 md:w-full md:px-3 xl:px-[5%]"
+            ? "course_list grid-cols-3 sm:grid-cols-1 sm:w-full sm:px-3 md:grid-cols-2 md:w-full md:px-3 xl:px-[5%] lg:px-[5%]"
             : "course_list grid-cols-2 w-[70%] mx-auto sm:grid-cols-1 sm:w-full sm:px-3 md:px-5"
         }`}
       >

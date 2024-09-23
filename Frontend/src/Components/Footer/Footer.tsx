@@ -28,7 +28,7 @@ const Footer = () => {
             <p>info.doyenify@gmail.com</p>
           </div>
         </div>
-        <div className="item xl:mt-0 mt-5">
+        <div className="item xl:mt-0 lg:mt-0 mt-5">
           <h3>Resources</h3>
           {Resources.map((resource, index) => (
             <Link to={resource.link} key={index}>

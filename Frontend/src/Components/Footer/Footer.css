@@ -1,8 +1,8 @@
 .footer {
-  @apply bg-[#0D5986] w-full flex flex-col gap-[3em] xl:text-base text-sm text-white px-[10%] pt-[3em];
+  @apply bg-[#0D5986] w-full flex flex-col gap-[3em] xl:text-base lg:text-base text-sm text-white px-[10%] pt-[3em];
 
   .footer_items {
-    @apply grid xl:grid-cols-4 grid-cols-2;
+    @apply grid xl:grid-cols-4 lg:grid-cols-4 grid-cols-2;
   }
 
   .item {
